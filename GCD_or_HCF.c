@@ -1,15 +1,16 @@
 #include<stdio.h>
 int main()
 {
-int a,b,c,i;
-scanf("%d%d",&a,&b);
-c=a<b?a:b;
-for(i=c;i>=1;i--)
-{
-    if(a%i==0 && b%i==0)
+    int a,b,t,i=0;
+    scanf("%d%d",&a,&b);
+    for(t=2;t<=a&&t<=b;t++)
     {
-        printf("%d",i);
-        break;
+        if(a%t==0&&b%t==0)
+        {i=t;}
     }
-}
+    if(i!=0)
+    printf("%d",i);
+    else
+    printf("1");
+    return 0;
 }
