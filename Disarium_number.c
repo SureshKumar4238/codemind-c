@@ -2,28 +2,25 @@
 #include<math.h>
 int main()
 {
-    int N;
-    int i,r,z,sum=0,c=0,k,p,pn=0;
-    scanf("%d",&N);
-    p=N;
-    while(N)
+    int a,i=0,j,u,s=0,t;
+    scanf("%d",&a);
+    u=t=a;
+    while(a!=0)
     {
-        r=N%10;
-        N=N/10;
-        c++;
-    } 
-    z=p;
-    while(p)
-    {
-        k=p%10;
-        p=p/10;
-        sum=sum+pow(k,c);
-        c--;
-        
+        j=a%10;
+        a/=10;
+        i++;
     }
-    if(z==sum)
+    j=0;
+    for(;i>0;i--)
+    {
+        j=u%10;
+        s+=pow(j,i);
+        u/=10;
+    }
+    if(s==t)
     printf("True");
     else
-   printf("False");
-    
+    printf("False");
+    return 0;
 }
